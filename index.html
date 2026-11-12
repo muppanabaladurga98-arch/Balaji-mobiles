@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Balaji Mobile - Smartphones, accessories and mobile repair services in Eluru RR Peta.">
+<title>Balaji Mobile | Mobiles & Repair Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #171735;
+    --purple: #9272F2;
+    --coral: #FF806D;
+    --mint: #79D9B2;
+    --cream: #FFF8EF;
+    --gold: #FFD477;
+    --text: #292941;
+    --muted: #77778B;
+    --shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+    transition: background .4s, color .4s;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.container {
+    width: min(1150px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.highlight {
+    color: var(--coral);
+}
+
+/* LAPTOP BACKGROUND */
+
+@media (min-width: 1025px) {
+    body {
+        background:
+        radial-gradient(ellipse at 10% 10%, #30265E 0%, transparent 38%),
+        radial-gradient(ellipse at 90% 65%, #183F4B 0%, transparent 35%),
+        linear-gradient(135deg, #101126, #171735 55%, #202047);
+        color: #F8F5FF;
+    }
+
+    .hero {
+        background:
+        radial-gradient(circle at 85% 20%, rgba(146,114,242,.30), transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(121,217,178,.16), transparent 30%),
+        linear-gradient(120deg, #171735, #25204D);
+    }
+
+    .benefits { background: #211F43; }
+    .shop-section { background: linear-gradient(135deg,#171735,#242044); }
+    .accessory-section { background: linear-gradient(135deg,#191A36,#243C46); }
+    .repair-section { background: linear-gradient(135deg,#142C31,#1B3F40); }
+    .about-section { background: linear-gradient(135deg,#242044,#34264D); }
+    .contact-section { background: linear-gradient(135deg,#171735,#303054); }
+
+    .section-heading h2,
+    .hero h1,
+    .about-content h2 {
+        color: white;
+    }
+
+    .section-heading p,
+    .hero p,
+    .about-content p {
+        color: #C8C6DC;
+    }
+
+    .product-card,
+    .accessory-card,
+    .repair-card,
+    .about-box,
+    .contact-box {
+        background: #292747;
+        color: white;
+        border: 1px solid rgba(255,255,255,.09);
+        box-shadow: 0 12px 30px rgba(0,0,0,.20);
+    }
+
+    .product-card img { background: #343153; }
+
+    .product-info h3,
+    .accessory-card h3,
+    .repair-info h3,
+    .about-box h3,
+    .contact-box h3 {
+        color: white;
+    }
+
+    .product-info p,
+    .accessory-card p,
+    .repair-info p,
+    .contact-details p,
+    .about-box li {
+        color: #D1CEE2;
+    }
+
+    .shop-tools input,
+    .shop-tools select,
+    .contact-box input,
+    .contact-box textarea,
+    .contact-box select {
+        background: #383553;
+        color: white;
+        border-color: #555174;
+    }
+
+    .shop-tools input::placeholder,
+    .contact-box input::placeholder,
+    .contact-box textarea::placeholder {
+        color: #C3BED6;
+    }
+
+    .contact-details strong,
+    .benefit h3 {
+        color: white;
+    }
+
+    .benefit p { color: #C8C6DC; }
+}
+
+/* HEADER */
+
+header {
+    background: #171735;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span { color: var(--coral); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 23px;
+}
+
+.nav-links a {
+    color: #EEEEFF;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.cart-button {
+    background: var(--coral);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    font-size: 26px;
+}
+
+/* HERO */
+
+.hero {
+    padding: 85px 0;
+    background: linear-gradient(120deg,#FFF0E9,#EEE9FF);
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: #E7DDFF;
+    color: #6246BF;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px,5vw,58px);
+    line-height: 1.2;
+    color: #171735;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #68677E;
+    max-width: 550px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: var(--purple);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #171735;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 2px solid var(--purple);
+    color: var(--purple);
+}
+
+.btn-outline:hover {
+    background: var(--purple);
+    color: white;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+/* BENEFITS */
+
+.benefits {
+    padding: 25px 0;
+    background: white;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.benefit { padding: 12px; }
+.benefit .emoji { font-size: 28px; }
+.benefit h3 { color: var(--navy); font-size: 15px; }
+.benefit p { font-size: 12px; color: var(--muted); }
+
+/* SHOP */
+
+.shop-section { background: #F0ECFF; }
+
+.shop-tools {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.shop-tools input,
+.shop-tools select {
+    min-width: 210px;
+    padding: 13px;
+    border: 1px solid #DCD4F4;
+    border-radius: 9px;
+    outline: none;
+}
+
+.shop-tools input:focus,
+.shop-tools select:focus { border-color: var(--purple); }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.product-card:hover { transform: translateY(-6px); }
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    padding: 15px;
+    background: #FAF8FF;
+}
+
+.product-info { padding: 17px; }
+.product-info h3 { font-size: 16px; color: var(--navy); }
+.product-info p { color: var(--muted); font-size: 13px; }
+
+.price {
+    color: var(--purple);
+    font-size: 20px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.card-actions { display: flex; gap: 8px; }
+
+.small-btn {
+    flex: 1;
+    padding: 10px 5px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.add-btn { background: var(--purple); color: white; }
+.view-btn { background: #FFE5DF; color: #C84C3B; }
+
+.empty-message {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 30px;
+}
+
+/* ACCESSORIES */
+
+.accessory-section { background: #FFF8EF; }
+
+.accessory-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.accessory-card {
+    background: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.accessory-card:hover { transform: translateY(-5px); }
+.accessory-icon { font-size: 42px; margin-bottom: 10px; }
+.accessory-card h3 { color: var(--navy); }
+.accessory-card p { color: var(--muted); font-size: 13px; }
+
+/* REPAIRS */
+
+.repair-section { background: #E8F7EF; }
+
+.repair-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.repair-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.repair-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.repair-info { padding: 17px; }
+.repair-info h3 { color: var(--navy); font-size: 16px; }
+
+.repair-info p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 8px 0 14px;
+}
+
+.repair-info a {
+    display: inline-block;
+    background: #168B62;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ABOUT */
+
+.about-section {
+    background: linear-gradient(120deg,#FFF1E9,#EEE9FF);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.about-content h2 {
+    color: var(--navy);
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: #68677E;
+    margin-bottom: 15px;
+}
+
+.about-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.about-box h3 { color: var(--purple); margin-bottom: 12px; }
+.about-box li { list-style: none; padding: 7px 0; }
+.about-box li::before {
+    content: "✓ ";
+    color: #168B62;
+    font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact-section { background: #EFEDFF; }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-box {
+    background: white;
+    padding: 27px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.contact-box h3 { color: var(--navy); margin-bottom: 17px; }
+
+.contact-box input,
+.contact-box textarea,
+.contact-box select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 13px;
+    border: 1px solid #E1DDED;
+    border-radius: 9px;
+    outline: none;
+}
+
+.contact-box textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus,
+.contact-box select:focus {
+    border-color: var(--purple);
+}
+
+.submit-btn {
+    background: #168B62;
+    color: white;
+    width: 100%;
+    padding: 13px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.contact-details p {
+    padding: 12px 0;
+    border-bottom: 1px solid #EEEEF3;
+    color: #55556B;
+}
+
+.contact-details strong { color: var(--navy); }
+
+.contact-details a {
+    color: #168B62;
+    font-weight: 700;
+}
+
+/* MODALS */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(10,10,30,.7);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal.active { display: flex; }
+
+.modal-content {
+    background: white;
+    color: #292941;
+    padding: 25px;
+    border-radius: 17px;
+    width: min(450px,100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: transparent;
+    color: #171735;
+    font-size: 26px;
+}
+
+.modal-content h2 { color: var(--navy); margin-bottom: 18px; }
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+    background: #FFE5DF;
+    color: #C84C3B;
+    padding: 7px 10px;
+    border-radius: 6px;
+}
+
+.cart-total {
+    color: var(--purple);
+    font-weight: 800;
+    font-size: 20px;
+    margin: 18px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #171735;
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
+footer p {
+    color: #D1D0E0;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+footer .logo { margin-bottom: 10px; }
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #20B875;
+    color: white;
+    font-size: 27px;
+    border-radius: 50%;
+    z-index: 1500;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+/* TABLET BACKGROUND */
+
+@media (min-width: 651px) and (max-width: 1024px) {
+    body {
+        background: linear-gradient(145deg,#EAF3FF,#E9F8F0,#F5EDFF);
+        color: #243047;
+    }
+
+    .hero { background: linear-gradient(120deg,#DDEBFF,#E8E0FF); }
+    .benefits { background: white; }
+    .shop-section { background: #E8F0FF; }
+    .accessory-section { background: #F4F0FF; }
+    .repair-section { background: #E2F5EC; }
+    .about-section { background: #FFF0E7; }
+    .contact-section { background: #E8EEFF; }
+}
+
+/* MOBILE BACKGROUND */
+
+@media (max-width: 650px) {
+    body {
+        background:
+        radial-gradient(circle at 5% 10%,#F9E5D9,transparent 35%),
+        radial-gradient(circle at 95% 50%,#DDF5EA,transparent 32%),
+        linear-gradient(150deg,#FFF9F0,#F0EDFF);
+        color: #292941;
+    }
+
+    .hero { background: linear-gradient(145deg,#FFF0E6,#EDE8FF); }
+    .benefits { background: white; }
+    .shop-section { background: #F0ECFF; }
+    .accessory-section { background: #FFF7EA; }
+    .repair-section { background: #E7F7EF; }
+    .about-section { background: #FFF0E8; }
+    .contact-section { background: #ECEAFF; }
+
+    .product-card,
+    .accessory-card,
+    .repair-card,
+    .about-box,
+    .contact-box {
+        background: white;
+        color: #292941;
+        border: 1px solid rgba(120,110,160,.12);
+    }
+
+    .section-heading h2,
+    .about-content h2 { color: #171735; }
+
+    .section-heading p,
+    .about-content p { color: #77778B; }
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 1000px) {
+    .product-grid,
+    .repair-grid,
+    .accessory-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .hero-content { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 650px) {
+    .navbar { min-height: 70px; }
+
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #171735;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .nav-links.show { display: flex; }
+
+    .logo { font-size: 19px; }
+
+    .cart-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .hero { padding: 55px 0; }
+
+    .hero-content,
+    .about-content,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        max-height: 260px;
+        object-fit: cover;
+    }
+
+    .benefit-grid { grid-template-columns: repeat(2,1fr); }
+
+    .product-grid,
+    .repair-grid,
+    .accessory-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+    }
+
+    .product-card img { height: 135px; }
+    .repair-card img { height: 125px; }
+    .product-info { padding: 12px; }
+    .product-info h3 { font-size: 14px; }
+    .section { padding: 50px 0; }
+
+    .shop-tools input,
+    .shop-tools select { width: 100%; }
+}
+
+@media (max-width: 380px) {
+    .product-grid,
+    .repair-grid,
+    .accessory-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+        <a href="#home" class="logo">Balaji <span>Mobile.</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Mobiles</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+            <li><a href="#repairs">Repairs</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <div>
+            <span class="hero-tag">Welcome to Balaji Mobile</span>
+            <h1>Your Mobile World, <span class="highlight">Made Better.</span></h1>
+            <p>
+                Discover the latest smartphones, quality accessories
+                and trusted mobile repair services at Balaji Mobile.
+                We help you stay connected with confidence.
+            </p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn btn-primary">Explore Mobiles</a>
+                <a href="#repairs" class="btn btn-outline">Repair Services</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85"
+                 alt="Modern smartphone">
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+    <div class="container benefit-grid">
+        <div class="benefit">
+            <div class="emoji">📱</div>
+            <h3>Latest Mobiles</h3>
+            <p>Popular smartphone models</p>
+        </div>
+        <div class="benefit">
+            <div class="emoji">🛠️</div>
+            <h3>Expert Repairs</h3>
+            <p>Mobile repair enquiries</p>
+        </div>
+        <div class="benefit">
+            <div class="emoji">🎧</div>
+            <h3>Accessories</h3>
+            <p>Useful mobile accessories</p>
+        </div>
+        <div class="benefit">
+            <div class="emoji">🤝</div>
+            <h3>Customer Support</h3>
+            <p>Friendly assistance</p>
+        </div>
+    </div>
+</section>
+
+<!-- MOBILES -->
+
+<section class="section shop-section" id="shop">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Explore Our <span class="highlight">Mobiles</span></h2>
+            <p>Find a smartphone that matches your needs.</p>
+        </div>
+
+        <div class="shop-tools">
+            <input type="search" id="searchInput" placeholder="Search mobile...">
+
+            <select id="brandFilter">
+                <option value="all">All Brands</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Apple">Apple</option>
+                <option value="Redmi">Redmi</option>
+                <option value="Vivo">Vivo</option>
+                <option value="Realme">Realme</option>
+            </select>
+
+            <select id="sortFilter">
+                <option value="default">Sort by</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+            </select>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+    </div>
+</section>
+
+<!-- ACCESSORIES -->
+
+<section class="section accessory-section" id="accessories">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Mobile <span class="highlight">Accessories</span></h2>
+            <p>Everything you need for your smartphone.</p>
+        </div>
+
+        <div class="accessory-grid">
+            <div class="accessory-card">
+                <div class="accessory-icon">🎧</div>
+                <h3>Earphones</h3>
+                <p>Enjoy your favourite music.</p>
+            </div>
+            <div class="accessory-card">
+                <div class="accessory-icon">🔌</div>
+                <h3>Chargers</h3>
+                <p>Reliable charging accessories.</p>
+            </div>
+            <div class="accessory-card">
+                <div class="accessory-icon">🛡️</div>
+                <h3>Screen Guards</h3>
+                <p>Protect your mobile screen.</p>
+            </div>
+            <div class="accessory-card">
+                <div class="accessory-icon">📱</div>
+                <h3>Mobile Covers</h3>
+                <p>Stylish mobile protection.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REPAIRS -->
+
+<section class="section repair-section" id="repairs">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Mobile <span class="highlight">Repair Services</span></h2>
+            <p>We help with common mobile problems.</p>
+        </div>
+
+        <div class="repair-grid">
+            <div class="repair-card">
+                <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=700&q=80" alt="Mobile screen repair">
+                <div class="repair-info">
+                    <h3>Screen Replacement</h3>
+                    <p>Screen damage and display issues.</p>
+                    <a href="#contact">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="repair-card">
+                <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=700&q=80" alt="Mobile battery">
+                <div class="repair-info">
+                    <h3>Battery Replacement</h3>
+                    <p>Battery and charging problems.</p>
+                    <a href="#contact">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="repair-card">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=700&q=80" alt="Mobile repair">
+                <div class="repair-info">
+                    <h3>Charging Port Repair</h3>
+                    <p>Charging port inspection and repair.</p>
+                    <a href="#contact">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="repair-card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80" alt="Electronic device service">
+                <div class="repair-info">
+                    <h3>Software Service</h3>
+                    <p>Software and performance issues.</p>
+                    <a href="#contact">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section about-section" id="about">
+    <div class="container about-content">
+        <div>
+            <h2>About <span class="highlight">Balaji Mobile</span></h2>
+            <p>
+                Welcome to Balaji Mobile. We aim to make your mobile
+                shopping and service experience simple and convenient.
+            </p>
+            <p>
+                Explore smartphones, discover useful accessories and
+                contact us for mobile repair enquiries. Our goal is
+                to provide friendly support and help you find the
+                right solution.
+            </p>
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+
+        <div class="about-box">
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Mobile shopping assistance</li>
+                <li>Useful mobile accessories</li>
+                <li>Repair service enquiries</li>
+                <li>Friendly customer support</li>
+                <li>Convenient WhatsApp contact</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact-section" id="contact">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Get In <span class="highlight">Touch</span></h2>
+            <p>Visit our shop or send us a WhatsApp message.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-box">
+                <h3>Send an Enquiry</h3>
+
+                <form id="contactForm">
+                    <input type="text" id="customerName"
+                           placeholder="Your Name" required>
+
+                    <input type="tel" id="customerPhone"
+                           placeholder="Your Phone Number"
+                           pattern="[0-9]{10}" maxlength="10" required>
+
+                    <select id="customerService" required>
+                        <option value="">Select a Service</option>
+                        <option>Mobile Purchase</option>
+                        <option>Mobile Repair</option>
+                        <option>Mobile Accessories</option>
+                        <option>Other Enquiry</option>
+                    </select>
+
+                    <textarea id="customerMessage"
+                              placeholder="Write your message..."
+                              required></textarea>
+
+                    <button type="submit" class="submit-btn">
+                        Send via WhatsApp
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-box contact-details">
+                <h3>Contact Information</h3>
+
+                <p>
+                    <strong>🏪 Shop:</strong> Balaji Mobile
+                </p>
+
+                <p>
+                    <strong>📞 Phone:</strong>
+                    <a href="tel:+918074746443">+91 8074 746 443</a>
+                </p>
+
+                <p>
+                    <strong>📍 Address:</strong> Eluru, RR Peta
+                </p>
+
+                <p>
+                    <strong>🕒 Working Hours:</strong>
+                    9:00 AM to 9:00 PM
+                </p>
+
+                <p>
+                    <strong>💬 WhatsApp:</strong>
+                    <a href="https://wa.me/918074746443"
+                       target="_blank" rel="noopener">
+                        +91 8074 746 443
+                    </a>
+                </p>
+
+                <br>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=RR+Peta+Eluru+Andhra+Pradesh"
+                   target="_blank" rel="noopener"
+                   class="btn btn-outline">
+                    View Location on Maps
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CART MODAL -->
+
+<div class="modal" id="cartModal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeCart()">×</button>
+        <h2>Your Shopping Cart 🛒</h2>
+        <div id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">Total: ₹0</div>
+        <button class="submit-btn" onclick="checkout()">
+            Enquire on WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- PRODUCT MODAL -->
+
+<div class="modal" id="productModal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeProduct()">×</button>
+        <div id="productDetails"></div>
+    </div>
+</div>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+
+<a class="whatsapp-float"
+   id="whatsappFloat"
+   href="https://wa.me/918074746443"
+   target="_blank"
+   rel="noopener"
+   aria-label="WhatsApp">✆</a>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+        <div class="logo">Balaji <span>Mobile.</span></div>
+        <p>Mobiles | Accessories | Repair Services</p>
+        <p>📍 Eluru, RR Peta</p>
+        <p>📞 +91 8074 746 443</p>
+        <p>🕒 9:00 AM to 9:00 PM</p>
+        <p>© <span id="year"></span> Balaji Mobile. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+
+/* SHOP WHATSAPP NUMBER */
+
+const SHOP_WHATSAPP = "918074746443";
+
+/* SAMPLE PRODUCTS */
+
+const products = [
+    {
+        id: 1,
+        name: "Samsung Galaxy S Series",
+        brand: "Samsung",
+        price: 45999,
+        description: "Modern Samsung smartphone with premium features.",
+        image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        id: 2,
+        name: "Apple iPhone",
+        brand: "Apple",
+        price: 69999,
+        description: "Apple smartphone with a premium design.",
+        image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        id: 3,
+        name: "Redmi Smartphone",
+        brand: "Redmi",
+        price: 14999,
+        description: "A practical smartphone for everyday use.",
+        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        id: 4,
+        name: "Vivo Smartphone",
+        brand: "Vivo",
+        price: 18999,
+        description: "Stylish smartphone for daily activities.",
+        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        id: 5,
+        name: "Realme Smartphone",
+        brand: "Realme",
+        price: 12999,
+        description: "Affordable smartphone for everyday needs.",
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        id: 6,
+        name: "Samsung Galaxy A Series",
+        brand: "Samsung",
+        price: 21999,
+        description: "Samsung smartphone with useful daily features.",
+        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        id: 7,
+        name: "Apple iPhone Pro",
+        brand: "Apple",
+        price: 99999,
+        description: "Premium Apple smartphone.",
+        image: "https://images.unsplash.com/photo-1603891128711-11b4b03bb138?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        id: 8,
+        name: "Vivo Y Series",
+        brand: "Vivo",
+        price: 15999,
+        description: "A stylish phone for everyday use.",
+        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=80"
+    }
+];
+
+let cart = [];
+
+const productGrid = document.getElementById("productGrid");
+const searchInput = document.getElementById("searchInput");
+const brandFilter = document.getElementById("brandFilter");
+const sortFilter = document.getElementById("sortFilter");
+
+/* DISPLAY PRODUCTS */
+
+function displayProducts() {
+    let filtered = [...products];
+
+    const search = searchInput.value.toLowerCase();
+    const brand = brandFilter.value;
+    const sort = sortFilter.value;
+
+    filtered = filtered.filter(product =>
+        product.name.toLowerCase().includes(search) ||
+        product.brand.toLowerCase().includes(search)
+    );
+
+    if (brand !== "all") {
+        filtered = filtered.filter(product => product.brand === brand);
+    }
+
+    if (sort === "low") {
+        filtered.sort((a,b) => a.price-b.price);
+    }
+
+    if (sort === "high") {
+        filtered.sort((a,b) => b.price-a.price);
+    }
+
+    productGrid.innerHTML = "";
+
+    if (filtered.length === 0) {
+        productGrid.innerHTML =
+            '<p class="empty-message">No matching mobiles found.</p>';
+        return;
+    }
+
+    filtered.forEach(product => {
+        productGrid.innerHTML += `
+            <div class="product-card">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p>${product.brand}</p>
+                    <div class="price">₹${product.price.toLocaleString("en-IN")}</div>
+                    <div class="card-actions">
+                        <button class="small-btn view-btn"
+                            onclick="viewProduct(${product.id})">
+                            Details
+                        </button>
+                        <button class="small-btn add-btn"
+                            onclick="addToCart(${product.id})">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+
+searchInput.addEventListener("input", displayProducts);
+brandFilter.addEventListener("change", displayProducts);
+sortFilter.addEventListener("change", displayProducts);
+
+/* ADD TO CART */
+
+function addToCart(id) {
+    const product = products.find(item => item.id === id);
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({...product, quantity: 1});
+    }
+
+    updateCart();
+    alert(product.name + " added to cart!");
+}
+
+/* UPDATE CART */
+
+function updateCart() {
+    const count = cart.reduce((sum,item) => sum+item.quantity,0);
+
+    document.getElementById("cartCount").textContent = count;
+
+    try {
+        localStorage.setItem("balajiMobileCart",JSON.stringify(cart));
+    } catch(error) {
+        console.warn("Cart could not be saved.");
+    }
+}
+
+/* LOAD SAVED CART */
+
+try {
+    const saved = JSON.parse(
+        localStorage.getItem("balajiMobileCart") || "[]"
+    );
+
+    if (Array.isArray(saved)) {
+        cart = saved.filter(item =>
+            products.some(product => product.id === item.id) &&
+            Number.isInteger(item.quantity) &&
+            item.quantity > 0
+        );
+    }
+} catch(error) {
+    cart = [];
+}
+
+updateCart();
+
+/* OPEN AND CLOSE CART */
+
+function openCart() {
+    document.getElementById("cartModal").classList.add("active");
+    displayCart();
+}
+
+function closeCart() {
+    document.getElementById("cartModal").classList.remove("active");
+}
+
+/* DISPLAY CART */
+
+function displayCart() {
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = "<p>Your cart is empty.</p>";
+        cartTotal.textContent = "Total: ₹0";
+        return;
+    }
+
+    let total = 0;
+    cartItems.innerHTML = "";
+
+    cart.forEach(item => {
+        total += item.price*item.quantity;
+
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                <div>
+                    <strong>${item.name}</strong>
+                    <p>₹${item.price.toLocaleString("en-IN")} × ${item.quantity}</p>
+                </div>
+                <button onclick="removeFromCart(${item.id})">Remove</button>
+            </div>
+        `;
+    });
+
+    cartTotal.textContent = "Total: ₹"+total.toLocaleString("en-IN");
+}
+
+/* REMOVE CART ITEM */
+
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    updateCart();
+    displayCart();
+}
+
+/* WHATSAPP FUNCTION */
+
+function openWhatsApp(message) {
+    const url = "https://wa.me/" + SHOP_WHATSAPP +
+                "?text=" + encodeURIComponent(message);
+
+    window.open(url,"_blank");
+}
+
+/* CHECKOUT */
+
+function checkout() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    let message = "Hello Balaji Mobile! I want to enquire about these products:\n\n";
+    let total = 0;
+
+    cart.forEach(item => {
+        message += `${item.name} - Quantity: ${item.quantity} - ₹${item.price*item.quantity}\n`;
+        total += item.price*item.quantity;
+    });
+
+    message += `\nEstimated Total: ₹${total}\nPlease share availability and details.`;
+
+    openWhatsApp(message);
+}
+
+/* PRODUCT DETAILS */
+
+function viewProduct(id) {
+    const product = products.find(item => item.id === id);
+
+    document.getElementById("productDetails").innerHTML = `
+        <img src="${product.image}" alt="${product.name}"
+             style="width:100%;height:200px;object-fit:contain">
+        <h2>${product.name}</h2>
+        <p>${product.description}</p>
+        <div class="price">₹${product.price.toLocaleString("en-IN")}</div>
+        <button class="btn btn-primary"
+                onclick="addToCart(${product.id});closeProduct();">
+            Add to Cart
+        </button>
+    `;
+
+    document.getElementById("productModal").classList.add("active");
+}
+
+function closeProduct() {
+    document.getElementById("productModal").classList.remove("active");
+}
+
+/* CONTACT FORM */
+
+document.getElementById("contactForm").addEventListener("submit",function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+    const service = document.getElementById("customerService").value;
+    const message = document.getElementById("customerMessage").value.trim();
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+    }
+
+    const whatsappMessage =
+        `Hello Balaji Mobile!\n\n`+
+        `Name: ${name}\n`+
+        `Phone: ${phone}\n`+
+        `Service: ${service}\n`+
+        `Message: ${message}`;
+
+    openWhatsApp(whatsappMessage);
+});
+
+/* MOBILE MENU */
+
+document.getElementById("menuToggle").addEventListener("click",function() {
+    document.getElementById("navLinks").classList.toggle("show");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click",() => {
+        document.getElementById("navLinks").classList.remove("show");
+    });
+});
+
+/* CLOSE MODALS */
+
+document.querySelectorAll(".modal").forEach(modal => {
+    modal.addEventListener("click",function(event) {
+        if (event.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+});
+
+/* CURRENT YEAR */
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* INITIAL DISPLAY */
+
+displayProducts();
+
+</script>
+
+</body>
+</html>
